@@ -1,0 +1,25 @@
+/* Reports.css */
+.report-container {
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .report-section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    color: #007bff;
+  }
+  

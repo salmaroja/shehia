@@ -1,0 +1,40 @@
+.view-information-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .content {
+    max-width: 600px;
+  }
+  
+  .view-information-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .citizen-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .citizen-table th,
+  .citizen-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .citizen-table th {
+    background-color: #f5f5f5;
+  }
+  
+  .citizen-table td {
+    color: #333;
+  }
+  
+  .citizen-table tr:hover {
+    background-color: #f9f9f9;
+  }
