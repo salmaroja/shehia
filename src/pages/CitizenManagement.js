@@ -41,7 +41,7 @@ const CitizenManagement = () => {
       .then(response => {
         console.log('Citizen deleted');
         fetchCitizens();
-        fetchCitizenCount(); // Refresh the count after deletion
+        fetchCitizenCount(); 
       })
       .catch(error => {
         console.error('Error deleting citizen: ', error);
@@ -66,10 +66,10 @@ const CitizenManagement = () => {
     axios.put(`http://localhost:8080/api/v1/citizen/update/${currentCitizen.id}`, currentCitizen)
       .then(response => {
         console.log('Citizen updated: ', response.data);
-        fetchCitizens(); // Refresh the list of citizens after update
-        fetchCitizenCount(); // Refresh the count after update
-        setIsModalOpen(false); // Close the modal after update
-        setUpdatingCitizenId(null); // Clear updating citizen ID
+        fetchCitizens(); 
+        fetchCitizenCount(); 
+        setIsModalOpen(false); 
+        setUpdatingCitizenId(null); 
         setCurrentCitizen({ id: null, name: '', address: '', email: '', dateOfBirth: '' }); // Clear current citizen data
       })
       .catch(error => {
@@ -81,12 +81,12 @@ const CitizenManagement = () => {
     axios.post('http://localhost:8080/api/v1/citizen/post-citizen', newCitizen)
       .then(response => {
         console.log('Citizen created');
-        setMessage('Citizen created'); // Set message after successful creation
-        fetchCitizens(); // Refresh the list of citizens after creation
-        fetchCitizenCount(); // Refresh the count after creation
+        setMessage('Citizen created');
+        fetchCitizens(); 
+        fetchCitizenCount(); 
         setTimeout(() => {
-          setMessage(''); // Clear message after a few seconds
-        }, 3000); // Adjust timeout as needed
+          setMessage(''); 
+        }, 3000); 
       })
       .catch(error => {
         console.error('Error creating citizen: ', error);
@@ -100,14 +100,14 @@ const CitizenManagement = () => {
   return (
     <div>
       <h2>Citizen Management</h2>
-      {message && <div className="alert alert-success">{message}</div>} {/* Display message if present */}
+      {message && <div className="alert alert-success">{message}</div>} 
       <div>
         <h3>Add New Citizen</h3>
         <CitizenForm fetchCitizens={fetchCitizens} addCitizen={addCitizen} />
       </div>
       <div>
         <h3>All Citizens</h3>
-        <p>Total Citizens: {count}</p> {/* Display count of citizens */}
+        <p>Total Citizens: {count}</p> 
         <table className="table table-striped">
           <thead>
             <tr>

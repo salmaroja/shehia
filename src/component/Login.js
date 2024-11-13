@@ -16,7 +16,7 @@ const Login = () => {
             alert("Password must be filled out");
             return;
         }
-        // Add login logic here
+        
         console.log('Submitted:', { username, userPassword });
     };
 
@@ -31,7 +31,7 @@ const Login = () => {
                             type="text"
                             placeholder="Enter User name"
                             name="username"
-                            className="auth-input user" // Changed class name here
+                            className="auth-input user"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
                             required
